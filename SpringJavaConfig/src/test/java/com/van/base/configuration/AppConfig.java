@@ -17,7 +17,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.van.springmvc")
+@ComponentScan(basePackages = "com.van.base")
 public class AppConfig extends WebMvcConfigurerAdapter {
 
 	/**
@@ -29,6 +29,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 		viewResolver.setViewClass(JstlView.class);
 		viewResolver.setPrefix("/WEB-INF/views/");
+		viewResolver.setViewClass(JstlView.class);
 		viewResolver.setSuffix(".jsp");
 		registry.viewResolver(viewResolver);
 	}
