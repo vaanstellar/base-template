@@ -19,7 +19,7 @@ public class AppController {
 	 */
 	@RequestMapping(value = { "/" }, method = RequestMethod.GET)
 	public String listUsers(ModelMap model) {
-		model.addAttribute("helloMessage", "Spring with java configuration base template");
+		model.addAttribute("helloMessage", "Spring with java... configuration base template");
 		return "index";
 	}
 
